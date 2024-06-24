@@ -9,13 +9,17 @@ spec:
   selector:
     matchLabels:
       app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
     spec:
       containers:
       - image: wonderwow/frontend
         name: frontend
         env:
           - name: "BACKEND_URL"
-            value: "http://service-backend:5001"
+            value: "http://service:5001"
         ports:
         - containerPort: 5000
 

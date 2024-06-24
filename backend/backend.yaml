@@ -9,6 +9,10 @@ spec:
   selector:
     matchLabels:
       app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
     spec:
       containers:
       - image: wonderwow/backend
