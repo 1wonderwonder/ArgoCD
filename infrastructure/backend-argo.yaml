@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: backend
+    namespace: default
     server: 'https://kubernetes.default.svc'
   source:
     path: backend
@@ -16,4 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions: []

@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: frontend
+    namespace: default
     server: 'https://kubernetes.default.svc'
   source:
     path: frontend
@@ -16,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
