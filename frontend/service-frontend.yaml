@@ -6,9 +6,9 @@ metadata:
   name: service-frontend
 spec:
   ports:
-    port: 5000
-    protocol: TCP
-    targetPort: 30080
+    - port: 5000
+      protocol: TCP
+      targetPort: 30080
   selector:
     app: frontend
   type: NodePort
