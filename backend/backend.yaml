@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: backend
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: backendrontend
+    spec:
+      containers:
+      - image: wonderwow/backend
+        name: backend
+        ports:
+        - containerPort: 5001
