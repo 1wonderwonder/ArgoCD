@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: backend
   name: backend
@@ -10,11 +9,6 @@ spec:
   selector:
     matchLabels:
       app: backend
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: backendrontend
     spec:
       containers:
       - image: wonderwow/backend

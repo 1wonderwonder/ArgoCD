@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: frontend
   name: frontend
@@ -10,20 +9,13 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  strategy: {}
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: frontend
     spec:
       containers:
       - image: wonderwow/frontend
         name: frontend
         env:
-          - name: "test"
-            value: 
+          - name: "BACKEND_URL"
+            value: "http://service-backend:5001"
         ports:
         - containerPort: 5000
-        resources: {}
-status: {}
+
